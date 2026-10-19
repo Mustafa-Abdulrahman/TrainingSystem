@@ -1,0 +1,13 @@
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\bin\Debug\net10.0\TrainingSystem.BL.deps.json
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\bin\Debug\net10.0\TrainingSystem.BL.dll
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\bin\Debug\net10.0\TrainingSystem.BL.pdb
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\TrainingSystem.BL.csproj.AssemblyReference.cache
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\TrainingSystem.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\TrainingSystem.BL.AssemblyInfoInputs.cache
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\TrainingSystem.BL.AssemblyInfo.cs
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\TrainingSystem.BL.csproj.CoreCompileInputs.cache
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\TrainingSystem.BL.dll
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\refint\TrainingSystem.BL.dll
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\TrainingSystem.BL.pdb
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\ref\TrainingSystem.BL.dll
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\Training.CFB8A605.Up2Date

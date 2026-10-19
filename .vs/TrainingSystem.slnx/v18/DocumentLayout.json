@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\oppa\\Desktop\\Dummy\\TrainingSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{35A4D9DA-49A3-C72E-EBDC-012146F0D431}|TrainingSystem.BL\\TrainingSystem.BL.csproj|c:\\users\\oppa\\desktop\\dummy\\trainingsystem\\trainingsystem.bl\\dtos\\common\\operationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35A4D9DA-49A3-C72E-EBDC-012146F0D431}|TrainingSystem.BL\\TrainingSystem.BL.csproj|solutionrelative:trainingsystem.bl\\dtos\\common\\operationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A4D9DA-49A3-C72E-EBDC-012146F0D431}|TrainingSystem.BL\\TrainingSystem.BL.csproj|c:\\users\\oppa\\desktop\\dummy\\trainingsystem\\trainingsystem.bl\\manager\\track\\trackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35A4D9DA-49A3-C72E-EBDC-012146F0D431}|TrainingSystem.BL\\TrainingSystem.BL.csproj|solutionrelative:trainingsystem.bl\\manager\\track\\trackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OperationResult.cs",
+              "DocumentMoniker": "C:\\Users\\oppa\\Desktop\\Dummy\\TrainingSystem\\TrainingSystem.BL\\Dtos\\Common\\OperationResult.cs",
+              "RelativeDocumentMoniker": "TrainingSystem.BL\\Dtos\\Common\\OperationResult.cs",
+              "ToolTip": "C:\\Users\\oppa\\Desktop\\Dummy\\TrainingSystem\\TrainingSystem.BL\\Dtos\\Common\\OperationResult.cs",
+              "RelativeToolTip": "TrainingSystem.BL\\Dtos\\Common\\OperationResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T21:39:21.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TrackManager.cs",
+              "DocumentMoniker": "C:\\Users\\oppa\\Desktop\\Dummy\\TrainingSystem\\TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
+              "RelativeDocumentMoniker": "TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
+              "ToolTip": "C:\\Users\\oppa\\Desktop\\Dummy\\TrainingSystem\\TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
+              "RelativeToolTip": "TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAuwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T21:31:04.489Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

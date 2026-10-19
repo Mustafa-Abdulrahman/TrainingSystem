@@ -1,0 +1,15 @@
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\obj\Debug\net10.0\TrainingSystem.DAL.csproj.AssemblyReference.cache
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\obj\Debug\net10.0\TrainingSystem.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\obj\Debug\net10.0\TrainingSystem.DAL.AssemblyInfoInputs.cache
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\obj\Debug\net10.0\TrainingSystem.DAL.AssemblyInfo.cs
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\obj\Debug\net10.0\TrainingSystem.DAL.csproj.CoreCompileInputs.cache
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\bin\Debug\net10.0\TrainingSystem.DAL.deps.json
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\bin\Debug\net10.0\TrainingSystem.DAL.runtimeconfig.json
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\bin\Debug\net10.0\TrainingSystem.DAL.dll
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\bin\Debug\net10.0\TrainingSystem.DAL.pdb
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\obj\Debug\net10.0\TrainingSystem.DAL.dll
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\obj\Debug\net10.0\refint\TrainingSystem.DAL.dll
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\obj\Debug\net10.0\TrainingSystem.DAL.pdb
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\obj\Debug\net10.0\TrainingSystem.DAL.genruntimeconfig.cache
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\obj\Debug\net10.0\ref\TrainingSystem.DAL.dll
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.DAL\obj\Debug\net10.0\Training.07E46C46.Up2Date

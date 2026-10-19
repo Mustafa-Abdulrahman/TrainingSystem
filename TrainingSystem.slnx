@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="TrainingSystem.BL/TrainingSystem.BL.csproj" />
+  <Project Path="TrainingSystem.DAL/TrainingSystem.DAL.csproj" />
+  <Project Path="TrainingSystem/TrainingSystem.csproj" />
+</Solution>
