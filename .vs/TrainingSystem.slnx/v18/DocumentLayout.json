@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\oppa\\Desktop\\Dummy\\TrainingSystem\\",
+  "WorkspaceRootPath": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{35A4D9DA-49A3-C72E-EBDC-012146F0D431}|TrainingSystem.BL\\TrainingSystem.BL.csproj|c:\\users\\oppa\\desktop\\dummy\\trainingsystem\\trainingsystem.bl\\dtos\\common\\operationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35A4D9DA-49A3-C72E-EBDC-012146F0D431}|TrainingSystem.BL\\TrainingSystem.BL.csproj|solutionrelative:trainingsystem.bl\\dtos\\common\\operationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3B2A6DEC-4E78-E6F2-7DE9-AFA99954C8C1}|TrainingSystem.DAL\\TrainingSystem.DAL.csproj|c:\\users\\mustafaabdulrahmanab\\desktop\\dummytest\\trainingsystem\\trainingsystem.dal\\repository\\genericrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B2A6DEC-4E78-E6F2-7DE9-AFA99954C8C1}|TrainingSystem.DAL\\TrainingSystem.DAL.csproj|solutionrelative:trainingsystem.dal\\repository\\genericrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35A4D9DA-49A3-C72E-EBDC-012146F0D431}|TrainingSystem.BL\\TrainingSystem.BL.csproj|c:\\users\\oppa\\desktop\\dummy\\trainingsystem\\trainingsystem.bl\\manager\\track\\trackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3B2A6DEC-4E78-E6F2-7DE9-AFA99954C8C1}|TrainingSystem.DAL\\TrainingSystem.DAL.csproj|c:\\users\\mustafaabdulrahmanab\\desktop\\dummytest\\trainingsystem\\trainingsystem.dal\\repository\\trackrepo\\trackrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B2A6DEC-4E78-E6F2-7DE9-AFA99954C8C1}|TrainingSystem.DAL\\TrainingSystem.DAL.csproj|solutionrelative:trainingsystem.dal\\repository\\trackrepo\\trackrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A4D9DA-49A3-C72E-EBDC-012146F0D431}|TrainingSystem.BL\\TrainingSystem.BL.csproj|c:\\users\\mustafaabdulrahmanab\\desktop\\dummytest\\trainingsystem\\trainingsystem.bl\\manager\\track\\trackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35A4D9DA-49A3-C72E-EBDC-012146F0D431}|TrainingSystem.BL\\TrainingSystem.BL.csproj|solutionrelative:trainingsystem.bl\\manager\\track\\trackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,36 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OperationResult.cs",
-              "DocumentMoniker": "C:\\Users\\oppa\\Desktop\\Dummy\\TrainingSystem\\TrainingSystem.BL\\Dtos\\Common\\OperationResult.cs",
-              "RelativeDocumentMoniker": "TrainingSystem.BL\\Dtos\\Common\\OperationResult.cs",
-              "ToolTip": "C:\\Users\\oppa\\Desktop\\Dummy\\TrainingSystem\\TrainingSystem.BL\\Dtos\\Common\\OperationResult.cs",
-              "RelativeToolTip": "TrainingSystem.BL\\Dtos\\Common\\OperationResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "GenericRepo.cs",
+              "DocumentMoniker": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem.DAL\\Repository\\GenericRepo.cs",
+              "RelativeDocumentMoniker": "TrainingSystem.DAL\\Repository\\GenericRepo.cs",
+              "ToolTip": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem.DAL\\Repository\\GenericRepo.cs",
+              "RelativeToolTip": "TrainingSystem.DAL\\Repository\\GenericRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T21:39:21.474Z",
+              "WhenOpened": "2026-10-20T11:56:24.178Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TrackManager.cs",
-              "DocumentMoniker": "C:\\Users\\oppa\\Desktop\\Dummy\\TrainingSystem\\TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
-              "RelativeDocumentMoniker": "TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
-              "ToolTip": "C:\\Users\\oppa\\Desktop\\Dummy\\TrainingSystem\\TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
-              "RelativeToolTip": "TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAuwDEAAAAAAAAAAAAAAA==",
+              "Title": "TrackRepo.cs",
+              "DocumentMoniker": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem.DAL\\Repository\\TrackRepo\\TrackRepo.cs",
+              "RelativeDocumentMoniker": "TrainingSystem.DAL\\Repository\\TrackRepo\\TrackRepo.cs",
+              "ToolTip": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem.DAL\\Repository\\TrackRepo\\TrackRepo.cs",
+              "RelativeToolTip": "TrainingSystem.DAL\\Repository\\TrackRepo\\TrackRepo.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwCEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T21:31:04.489Z",
+              "WhenOpened": "2026-10-20T11:01:45.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TrackManager.cs",
+              "DocumentMoniker": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
+              "RelativeDocumentMoniker": "TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
+              "ToolTip": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
+              "RelativeToolTip": "TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAYwOcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T10:39:28.002Z",
               "EditorCaption": ""
             }
           ]

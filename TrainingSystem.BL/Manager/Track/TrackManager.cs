@@ -31,16 +31,13 @@ public class TrackManager : ITrackManager
             Description = dto.Description,
             IntakeId = dto.IntakeId,
             BranchId = dto.BranchId,
-        };
-
-        foreach(var course in dto.Courses)
-        {
-            track.TrackCourses.Add(new TrackCourse
+            TrackCourses = dto.Courses.Select(x => new TrackCourse
             {
-                CourseId = course.CourseId,
-                Hours = course.Hours,
-            });
-        }
+                CourseId = x.CourseId,
+                Hours = x.Hours,
+            }).ToList()
+        };
+  
 
         _unitOfWork.TrackRepo.Add(track);
         await _unitOfWork.SaveChangesAsync();
@@ -50,9 +47,31 @@ public class TrackManager : ITrackManager
 
     }
 
-    public Task<OperationResult> DeleteAsync(int id)
+    public async Task<OperationResult> DeleteAsync(int id)
     {
-        throw new NotImplementedException();
+        var trackToDelete = await _unitOfWork.TrackRepo.GetByIdAsync(id);
+        var hasStudents = await _unitOfWork.TrackRepo.HasStudentsAsync(id);
+        if (trackToDelete is null)
+        {
+            return new OperationResult
+            {
+                Succeeded = false,
+                Error = $"Track With Id {id} Not Found"
+            };
+        }
+        if (hasStudents)
+        {
+            return new OperationResult
+            {
+                Succeeded = false,
+                Error = $"Track With Id {id} Has Students, Cannot Delete It"
+            };
+        }
+
+        _unitOfWork.TrackRepo.Delete(trackToDelete);
+        await _unitOfWork.SaveChangesAsync();
+
+        return new OperationResult { Succeeded = true };
     }
 
     public async Task<List<TrackDto>> GetAllAsync()
@@ -126,10 +145,7 @@ public class TrackManager : ITrackManager
 
     }
 
-    public Task<TrackSaveDto?> GetForEditAsync(int id)
-    {
-        throw new NotImplementedException();
-    }
+   
 
     public async Task<List<LookupDto>> GetIntakesLookupAsync()
     {
@@ -139,8 +155,89 @@ public class TrackManager : ITrackManager
         return result;
     }
 
-    public Task<OperationResult> UpdateAsync(TrackSaveDto dto)
+    public async Task<TrackSaveDto?> GetForEditAsync(int id)
     {
-        throw new NotImplementedException();
+        var track = await _unitOfWork.TrackRepo.GetByIdAsync(id);
+        if (track is null)
+            return null;
+
+        var trackCourses = await _unitOfWork.TrackRepo.GetTrackCoursesAsync(id);
+
+        var result = new TrackSaveDto
+        {
+            Id = track.Id,
+            Name = track.Name,
+            Description = track.Description,
+            IntakeId = track.IntakeId,
+            BranchId = track.BranchId,
+            Courses = trackCourses.Select(x => new TrackCourseSaveDto
+            {
+                CourseId = x.CourseId,
+                Hours = x.Hours
+            }).ToList()
+        };
+
+        return result;
+
     }
+
+        public async Task<OperationResult> UpdateAsync(TrackSaveDto dto)
+        {
+            var track = await _unitOfWork.TrackRepo.GetByIdAsync(dto.Id);
+
+            if(track is null)
+            {
+                return new OperationResult
+                {
+                    Succeeded = false,
+                    Error = $"Track With Id {dto.Id} Not Exists"
+                };
+            }
+            var checkIfExist = await _unitOfWork.TrackRepo.ExistsAsync(dto.IntakeId, dto.BranchId, dto.Name, dto.Id);
+            if (checkIfExist)
+            {
+                return new OperationResult
+                {
+                    Succeeded = false,
+                    Error = $"Track With Name {dto.Name} Already Exists"
+                };
+            }
+            track.Name = dto.Name;
+            track.Description = dto.Description;
+            track.IntakeId = dto.IntakeId;
+            track.BranchId = dto.BranchId;
+
+            var exitingCourse = await _unitOfWork.TrackRepo.GetTrackCoursesAsync(track.Id);
+            var incomingCourse = dto.Courses;
+
+            Dictionary<int, TrackCourse> exitingCourseDict = exitingCourse.ToDictionary(x => x.CourseId, x => x);
+            foreach (var course in incomingCourse)
+            {
+                if (exitingCourseDict.ContainsKey(course.CourseId))
+                {
+                    // Update existing course
+                    exitingCourseDict[course.CourseId].Hours = course.Hours;
+                    exitingCourseDict.Remove(course.CourseId);
+                }
+                else
+                {
+                    // Add new course
+                    track.TrackCourses.Add(new TrackCourse
+                    {
+                        CourseId = course.CourseId,
+                        Hours = course.Hours
+                    });
+                }
+            }
+            foreach (var course in exitingCourseDict.Values)
+                {
+                    // Remove courses that are not in the incoming list
+                    track.TrackCourses.Remove(course);
+                    _unitOfWork.TrackCourseRepo.Delete(course);
+            }
+
+            _unitOfWork.TrackRepo.Update(track);
+            await _unitOfWork.SaveChangesAsync();
+            return new OperationResult { Succeeded = true };
+        }
 }

@@ -12,7 +12,6 @@ public class Intake
     public DateTime EndDate { get; set; }
     public int TrainingProgramId { get; set; }
     public TrainingProgram TrainingProgram { get; set; } = null!;
-    public ICollection<Student> Students { get; set; } = new List<Student>();
     public ICollection<Track> Tracks { get; set; } = new List<Track>();
 
 }

@@ -14,7 +14,6 @@ public class Track
     public int BranchId { get; set; }
     public Branch Branch { get; set; } = null!;
     public ICollection<TrackCourse> TrackCourses { get; set; } = new List<TrackCourse>();
-
     public ICollection<Student> Students { get; set; } = new List<Student>();
 
 }

@@ -10,7 +10,6 @@ public class Branch
     public string Name { get; set; } = string.Empty;
     public string? City { get; set; }
     public string? Adress { get; set; }
-    public ICollection<Student> Students { get; set; } = new List<Student>();
     public ICollection<Track> Tracks { get; set; } = new List<Track>();
 
 }

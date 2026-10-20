@@ -25,13 +25,13 @@ public class TrackRepo : GenericRepo<Track>, ITrackRepo
 
     public async Task<Track?> GetByIdWithDetailsAsync(int id)
     {
-        return await context.Tracks.Include(x => x.Intake).Include(x => x.Branch).AsNoTracking().FirstOrDefaultAsync(x=>x.Id == id);
+        return await context.Tracks.Include(x => x.Intake).Include(x => x.Branch).FirstOrDefaultAsync(x=>x.Id == id);
 
     }
 
     public async Task<List<TrackCourse>> GetTrackCoursesAsync(int trackId)
     {
-        return await context.TrackCourses.AsNoTracking().Where(x => x.TrackId == trackId).Include(x=>x.Course).ToListAsync(); 
+        return await context.TrackCourses.Where(x => x.TrackId == trackId).Include(x=>x.Course).ToListAsync(); 
     }
 
     public async Task<List<Student>> GetTrackStudentsAsync(int trackId)

@@ -19,12 +19,7 @@ public class Student
 
     public string? Image {  get; set; }
     public DateTime DateOfBirth { get; set; }
-
-    public int BranchId { get; set; }
-    public Branch Branch { get; set; } = null!;
   
-    public int IntakeId { get; set; }
-    public Intake Intake { get; set; } = null!;
     public int TrackId { get; set; }
     public Track Track { get; set; } = null!;
 }
