@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3B2A6DEC-4E78-E6F2-7DE9-AFA99954C8C1}|TrainingSystem.DAL\\TrainingSystem.DAL.csproj|c:\\users\\mustafaabdulrahmanab\\desktop\\dummytest\\trainingsystem\\trainingsystem.dal\\repository\\genericrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B2A6DEC-4E78-E6F2-7DE9-AFA99954C8C1}|TrainingSystem.DAL\\TrainingSystem.DAL.csproj|solutionrelative:trainingsystem.dal\\repository\\genericrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7DCD8C1-F10E-F55D-BA8E-310B17A0FEEB}|TrainingSystem\\TrainingSystem.csproj|c:\\users\\mustafaabdulrahmanab\\desktop\\dummytest\\trainingsystem\\trainingsystem\\controllers\\trackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7DCD8C1-F10E-F55D-BA8E-310B17A0FEEB}|TrainingSystem\\TrainingSystem.csproj|solutionrelative:trainingsystem\\controllers\\trackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3B2A6DEC-4E78-E6F2-7DE9-AFA99954C8C1}|TrainingSystem.DAL\\TrainingSystem.DAL.csproj|c:\\users\\mustafaabdulrahmanab\\desktop\\dummytest\\trainingsystem\\trainingsystem.dal\\repository\\trackrepo\\trackrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B2A6DEC-4E78-E6F2-7DE9-AFA99954C8C1}|TrainingSystem.DAL\\TrainingSystem.DAL.csproj|solutionrelative:trainingsystem.dal\\repository\\trackrepo\\trackrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7DCD8C1-F10E-F55D-BA8E-310B17A0FEEB}|TrainingSystem\\TrainingSystem.csproj|c:\\users\\mustafaabdulrahmanab\\desktop\\dummytest\\trainingsystem\\trainingsystem\\views\\track\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7DCD8C1-F10E-F55D-BA8E-310B17A0FEEB}|TrainingSystem\\TrainingSystem.csproj|solutionrelative:trainingsystem\\views\\track\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35A4D9DA-49A3-C72E-EBDC-012146F0D431}|TrainingSystem.BL\\TrainingSystem.BL.csproj|c:\\users\\mustafaabdulrahmanab\\desktop\\dummytest\\trainingsystem\\trainingsystem.bl\\manager\\track\\trackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35A4D9DA-49A3-C72E-EBDC-012146F0D431}|TrainingSystem.BL\\TrainingSystem.BL.csproj|solutionrelative:trainingsystem.bl\\manager\\track\\trackmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7DCD8C1-F10E-F55D-BA8E-310B17A0FEEB}|TrainingSystem\\TrainingSystem.csproj|c:\\users\\mustafaabdulrahmanab\\desktop\\dummytest\\trainingsystem\\trainingsystem\\views\\track\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7DCD8C1-F10E-F55D-BA8E-310B17A0FEEB}|TrainingSystem\\TrainingSystem.csproj|solutionrelative:trainingsystem\\views\\track\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem\\Views\\Track\\Details.cshtml",
+              "RelativeDocumentMoniker": "TrainingSystem\\Views\\Track\\Details.cshtml",
+              "ToolTip": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem\\Views\\Track\\Details.cshtml",
+              "RelativeToolTip": "TrainingSystem\\Views\\Track\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-21T11:21:55.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GenericRepo.cs",
-              "DocumentMoniker": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem.DAL\\Repository\\GenericRepo.cs",
-              "RelativeDocumentMoniker": "TrainingSystem.DAL\\Repository\\GenericRepo.cs",
-              "ToolTip": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem.DAL\\Repository\\GenericRepo.cs",
-              "RelativeToolTip": "TrainingSystem.DAL\\Repository\\GenericRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Title": "TrackController.cs",
+              "DocumentMoniker": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem\\Controllers\\TrackController.cs",
+              "RelativeDocumentMoniker": "TrainingSystem\\Controllers\\TrackController.cs",
+              "ToolTip": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem\\Controllers\\TrackController.cs",
+              "RelativeToolTip": "TrainingSystem\\Controllers\\TrackController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAmwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T11:56:24.178Z",
+              "WhenOpened": "2026-10-21T11:15:48.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TrackRepo.cs",
-              "DocumentMoniker": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem.DAL\\Repository\\TrackRepo\\TrackRepo.cs",
-              "RelativeDocumentMoniker": "TrainingSystem.DAL\\Repository\\TrackRepo\\TrackRepo.cs",
-              "ToolTip": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem.DAL\\Repository\\TrackRepo\\TrackRepo.cs",
-              "RelativeToolTip": "TrainingSystem.DAL\\Repository\\TrackRepo\\TrackRepo.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAwwCEAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T11:01:45.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TrackManager.cs",
-              "DocumentMoniker": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
-              "RelativeDocumentMoniker": "TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
-              "ToolTip": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
-              "RelativeToolTip": "TrainingSystem.BL\\Manager\\Track\\TrackManager.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAAYwOcAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T10:39:28.002Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem\\Views\\Track\\Index.cshtml",
+              "RelativeDocumentMoniker": "TrainingSystem\\Views\\Track\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MustafaAbdulrahmanAb\\Desktop\\DummyTest\\TrainingSystem\\TrainingSystem\\Views\\Track\\Index.cshtml",
+              "RelativeToolTip": "TrainingSystem\\Views\\Track\\Index.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAABYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-21T11:14:49.458Z",
               "EditorCaption": ""
             }
           ]

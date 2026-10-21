@@ -9,6 +9,7 @@ namespace TrainingSystem
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddDataAccessExtensions(builder.Configuration);
+            builder.Services.AddBusinessLayerExtensionMethod();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

@@ -1,0 +1,152 @@
+﻿@model TrackDetailsDto;
+@{
+}
+@*
+
+    public class TrackDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public int IntakeId { get; set; }
+        public string IntakeName { get; set; } = string.Empty;
+        public int BranchId { get; set; }
+        public string BranchName { get; set; } = string.Empty;
+    }
+
+        public List<TrackCourseDto> Courses { get; set; } = new List<TrackCourseDto>();
+    public List<TrackStudentDto> Students { get; set; } = new List<TrackStudentDto>();
+
+    public class TrackCourseDto
+{
+    public int CourseId { get; set; }
+    public string CourseName { get; set; }
+    public int Hours { get; set; }
+}
+
+public class TrackStudentDto
+{
+    public int StudentId { get; set; }
+    public string FullName { get; set; }
+    public string Email { get; set; }
+}
+
+*@
+<div class="container my-5">
+    <!-- Header Section -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card shadow-sm border-0 bg-light">
+                <div class="card-body p-4">
+                    <h1 class="display-5 fw-bold text-primary mb-2">@Model.Name</h1>
+                    <p class="text-muted lead mb-3">@Model.Description</p>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <div class="p-3 bg-white rounded shadow-sm border">
+                                <span class="d-block text-muted small">Intake</span>
+                                <strong class="text-dark">@Model.IntakeName</strong> <span class="text-secondary">(ID: @Model.IntakeId)</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="p-3 bg-white rounded shadow-sm border">
+                                <span class="d-block text-muted small">Branch</span>
+                                <strong class="text-dark">@Model.BranchName</strong> <span class="text-secondary">(ID: @Model.BranchId)</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="p-3 bg-white rounded shadow-sm border">
+                                <span class="d-block text-muted small">Total Courses</span>
+                                <strong class="text-primary fs-5">@Model.Courses.Count</strong>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="p-3 bg-white rounded shadow-sm border">
+                                <span class="d-block text-muted small">Total Students</span>
+                                <strong class="text-success fs-5">@Model.Students.Count</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Courses Section -->
+    <div class="card shadow-sm border-0 mb-5">
+        <div class="card-header bg-primary text-white py-3">
+            <h4 class="mb-0"><i class="bi bi-journal-code me-2"></i>Assigned Courses</h4>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="py-3">Course Id</th>
+                            <th class="py-3">Course Name</th>
+                            <th class="py-3">Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Courses != null && Model.Courses.Any())
+                        {
+                            @foreach (var course in Model.Courses)
+                            {
+                                <tr>
+                                    <td>@course.CourseId</td>
+                                    <td class="fw-semibold">@course.CourseName</td>
+                                    <td><span class="badge bg-info text-dark">@course.Hours Hours</span></td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="3" class="text-center py-4 text-muted">No courses found for this track.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Students Section -->
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-header bg-success text-white py-3">
+            <h4 class="mb-0"><i class="bi bi-people me-2"></i>Enrolled Students</h4>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="py-3">Student Id</th>
+                            <th class="py-3">Full Name</th>
+                            <th class="py-3">Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Students != null && Model.Students.Any())
+                        {
+                            @foreach (var student in Model.Students)
+                            {
+                                <tr>
+                                    <td>@student.StudentId</td>
+                                    <td class="fw-semibold">@student.FullName</td>
+                                    <td><a href="mailto:@student.Email" class="text-decoration-none">@student.Email</a></td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="3" class="text-center py-4 text-muted">No students enrolled in this track yet.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

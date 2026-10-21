@@ -1,0 +1,103 @@
+﻿@model List<TrackDto>
+@{
+    ViewData["Title"] = "Tracks List";
+}
+
+@*
+
+    public class TrackDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public int IntakeId { get; set; }
+        public string IntakeName { get; set; } = string.Empty;
+        public int BranchId { get; set; }
+        public string BranchName { get; set; } = string.Empty;
+    }
+*@
+
+<div class="container my-5">
+    <!-- Page Header & Action Bar -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="fw-bold text-primary mb-1">Tracks Management</h1>
+            <p class="text-muted mb-0">Manage all training tracks, intakes, and branches.</p>
+        </div>
+        <div>
+            <a asp-action="Create" class="btn btn-success shadow-sm">
+                <i class="bi bi-plus-circle me-1"></i> Create New Track
+            </a>
+        </div>
+    </div>
+
+    <!-- Tracks Table Card -->
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="py-3">ID</th>
+                            <th class="py-3">Name</th>
+                            <th class="py-3">Description</th>
+                            <th class="py-3">Intake</th>
+                            <th class="py-3">Branch</th>
+                            <th class="py-3 text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            @foreach (var track in Model)
+                            {
+                                <tr>
+                                    <td class="fw-bold text-secondary">@track.Id</td>
+                                    <td>
+                                        <a asp-action="Details" asp-route-id="@track.Id" class="fw-semibold text-decoration-none text-primary">
+                                            @track.Name
+                                        </a>
+                                    </td>
+                                    <td class="text-muted text-truncate" style="max-width: 250px;" title="@track.Description">
+                                        @track.Description
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-light text-dark border">
+                                            @track.IntakeName <span class="text-muted">(@track.IntakeId)</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-light text-dark border">
+                                            @track.BranchName <span class="text-muted">(@track.BranchId)</span>
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="btn-group btn-group-sm" role="group">
+                                            <a asp-action="Details" asp-route-id="@track.Id" class="btn btn-outline-info" title="View Details">
+                                                <i class="bi bi-eye"></i> Details
+                                            </a>
+                                            <a asp-action="Update" asp-route-id="@track.Id" class="btn btn-outline-primary" title="Update">
+                                                <i class="bi bi-pencil"></i> Update
+                                            </a>
+                                            <a asp-action="Delete" asp-route-id="@track.Id" class="btn btn-outline-danger" title="Delete">
+                                                <i class="bi bi-trash"></i> Delete
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="6" class="text-center py-4 text-muted">
+                                    No tracks available at the moment.
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
