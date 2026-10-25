@@ -12,5 +12,5 @@ public class TrackSaveDto
     public int IntakeId { get; set; }
 
     public int BranchId { get; set; }
-    public List<TrackCourseSaveDto> Courses { get; set; }
+    public List<TrackCourseSaveDto> Courses { get; set; } = new();
 }

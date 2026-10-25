@@ -8,5 +8,6 @@ public class TrackCourseSaveDto
 {
     public int CourseId { get; set; }
     public int Hours { get; set; }
+    public bool isSelected { get; set; } 
 
 }

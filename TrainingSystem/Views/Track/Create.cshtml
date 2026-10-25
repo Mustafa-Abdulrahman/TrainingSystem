@@ -1,0 +1,115 @@
+﻿@model TrackSaveDto
+@*
+public class TrackSaveDto
+{
+    public int Id { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public string? Description { get; set; }
+    public int IntakeId { get; set; }
+
+    public int BranchId { get; set; }
+    public List<TrackCourseSaveDto> Courses { get; set; }
+}
+
+public class TrackCourseSaveDto
+{
+    public int CourseId { get; set; }
+    public int Hours { get; set; }
+    public bool isSelected { get; set; } 
+
+
+}
+
+public class LookupDto
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+}
+
+
+*@
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+else if (TempData["FailedToAdd"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<div asp-validation-summary="All" class="text-danger"></div>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name">Track Name</label>
+        <input asp-for="Name" type="text" class="form-control" aria-describedby="TrackName" placeholder="Asp.Net Core">
+        <span asp-validation-for="Name"></span>
+    </div>
+   
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" type="text" class="form-control" aria-describedby="Description" placeholder="Web application development">
+        <span asp-validation-for="Description"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="BranchId">BranchId</label>
+        <select asp-for="BranchId" asp-items="ViewBag.Branches">
+            <option value="">Select a branch</option>
+        </select>
+        <span asp-validation-for="BranchId"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IntakeId">Intake Id</label>
+        <select asp-for="IntakeId" asp-items="ViewBag.Intakes">
+            <option value="">Select a Intake</option>
+        </select>
+        <span asp-validation-for="IntakeId"></span>
+    </div>
+
+    @{
+        var allCourses = ViewBag.Courses as List<LookupDto>;
+
+        if (allCourses != null)
+        {
+            for (int i = 0; i < allCourses.Count; i++)
+            {
+                <div class="form-group border p-3 mb-2">
+
+                    <input type="hidden"
+                           name="Courses[@i].CourseId"
+                           value="@allCourses[i].Id" />
+
+                    <div class="form-check">
+                        <input type="checkbox"
+                               name="Courses[@i].isSelected"
+                               value="true"
+                               class="form-check-input" />
+
+                        <label class="form-check-label">
+                            @allCourses[i].Name
+                        </label>
+                    </div>
+
+                    <input type="number"
+                           name="Courses[@i].Hours"
+                           min="1"
+                           placeholder="Hours"
+                           class="form-control" />
+
+                </div>
+            }
+        }
+    }
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+
+}
