@@ -151,7 +151,6 @@ C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bi
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\System.Memory.Data.dll
-C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
@@ -242,7 +241,6 @@ C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bi
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\runtimes\win-arm64\native\msalruntime_arm64.dll
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\runtimes\win-x64\native\msalruntime.dll
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\runtimes\win-x86\native\msalruntime_x86.dll
-C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\runtimes\win\lib\net10.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\TrainingSystem.BL.dll
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\TrainingSystem.DAL.dll
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem\bin\Debug\net10.0\TrainingSystem.BL.pdb

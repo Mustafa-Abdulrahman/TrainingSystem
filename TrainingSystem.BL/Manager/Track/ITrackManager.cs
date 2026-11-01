@@ -15,4 +15,6 @@ public interface ITrackManager
     public Task<List<LookupDto>> GetBranchesLookupAsync();
     public Task<List<LookupDto>> GetIntakesLookupAsync();
     public Task<List<LookupDto>> GetCoursesLookupAsync();
+    public Task<List<LookupDto>> GetCoursesNotInTrackAsync(int id);
+    public Task<List<LookupDto>> GetCoursesInTrackAsync(int id);
 }

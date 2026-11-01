@@ -9,7 +9,6 @@
       "TrainingSystem/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "10.0.13",
-          "System.Security.Cryptography.Pkcs": "10.0.13",
           "TrainingSystem.BL": "1.0.0"
         },
         "runtime": {
@@ -349,8 +348,7 @@
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.7.1",
           "Microsoft.SqlServer.Server": "1.0.0",
           "System.Configuration.ConfigurationManager": "9.0.11",
-          "System.IdentityModel.Tokens.Jwt": "7.7.1",
-          "System.Security.Cryptography.Pkcs": "10.0.13"
+          "System.IdentityModel.Tokens.Jwt": "7.7.1"
         },
         "runtime": {
           "lib/net9.0/Microsoft.Data.SqlClient.dll": {
@@ -786,22 +784,6 @@
           }
         }
       },
-      "System.Security.Cryptography.Pkcs/10.0.13": {
-        "runtime": {
-          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1326.50504"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.1326.50504"
-          }
-        }
-      },
       "System.Security.Cryptography.ProtectedData/9.0.11": {
         "runtime": {
           "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
@@ -812,7 +794,6 @@
       },
       "TrainingSystem.BL/1.0.0": {
         "dependencies": {
-          "System.Security.Cryptography.Pkcs": "10.0.13",
           "TrainingSystem.DAL": "1.0.0"
         },
         "runtime": {
@@ -824,8 +805,7 @@
       },
       "TrainingSystem.DAL/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.13",
-          "System.Security.Cryptography.Pkcs": "10.0.13"
+          "Microsoft.EntityFrameworkCore.SqlServer": "10.0.13"
         },
         "runtime": {
           "TrainingSystem.DAL.dll": {
@@ -1142,13 +1122,6 @@
       "sha512": "sha512-BVYuec3jV23EMRDeR7Dr1/qhx7369dZzJ9IWy2xylvb4YfXsrUxspWc4UWYid/tj4zZK58uGZqn2WQiaDMhmAg==",
       "path": "system.memory.data/8.0.1",
       "hashPath": "system.memory.data.8.0.1.nupkg.sha512"
-    },
-    "System.Security.Cryptography.Pkcs/10.0.13": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-a+EovgC1fBnwdlQ6cn3j4JFBfKqiFaFvoAhjisOoSvazLAcIznaBzPQP0oYnvccmeXfqUH1KebVZOxSeH6rMaw==",
-      "path": "system.security.cryptography.pkcs/10.0.13",
-      "hashPath": "system.security.cryptography.pkcs.10.0.13.nupkg.sha512"
     },
     "System.Security.Cryptography.ProtectedData/9.0.11": {
       "type": "package",

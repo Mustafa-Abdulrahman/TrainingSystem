@@ -1,0 +1,30 @@
+﻿@model TrackSaveDto
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div asp-validation-summary="All" class="alert alert-danger shadow-sm mb-4" role="alert"></div>
+}
+<form method="post">
+    
+    <div class="form-group">
+        <label asp-for="Name">Track Name</label>
+        <input type="text" class="form-control" asp-for="Name" placeholder=".NET Full Stack">
+    </div>
+    <div class="form-group">
+        <label asp-for="Description">Track Description</label>
+        <input type="text" class="form-control" asp-for="Description" placeholder=".NET Full Stack And Gen Ai">
+    </div>
+    <div class="form-group">
+        <label asp-for="IntakeId">Intake</label>
+        <select class="form-control" asp-for="IntakeId" asp-items="ViewBag.Intakes" multiple>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="BranchId">Branch</label>
+        <select class="form-control" asp-for="BranchId" asp-items="ViewBag.Branches" multiple>
+        </select>
+    </div>
+    
+
+
+</form>

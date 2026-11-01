@@ -28,88 +28,117 @@ public class LookupDto
 
 
 *@
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-success">
-        @TempData["SuccessMessage"]
-    </div>
-}
-else if (TempData["FailedToAdd"] != null)
-{
-    <div class="alert alert-danger">
-        @TempData["ErrorMessage"]
-    </div>
-}
 
-<div asp-validation-summary="All" class="text-danger"></div>
-<form method="post">
-    <div class="form-group">
-        <label asp-for="Name">Track Name</label>
-        <input asp-for="Name" type="text" class="form-control" aria-describedby="TrackName" placeholder="Asp.Net Core">
-        <span asp-validation-for="Name"></span>
-    </div>
-   
-    <div class="form-group">
-        <label asp-for="Description">Description</label>
-        <input asp-for="Description" type="text" class="form-control" aria-describedby="Description" placeholder="Web application development">
-        <span asp-validation-for="Description"></span>
-    </div>
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            
+            <!-- Alert Messages -->
 
-    <div class="form-group">
-        <label asp-for="BranchId">BranchId</label>
-        <select asp-for="BranchId" asp-items="ViewBag.Branches">
-            <option value="">Select a branch</option>
-        </select>
-        <span asp-validation-for="BranchId"></span>
-    </div>
 
-    <div class="form-group">
-        <label asp-for="IntakeId">Intake Id</label>
-        <select asp-for="IntakeId" asp-items="ViewBag.Intakes">
-            <option value="">Select a Intake</option>
-        </select>
-        <span asp-validation-for="IntakeId"></span>
-    </div>
+            @if (!ViewData.ModelState.IsValid)
+                {
+                    <div asp-validation-summary="All" class="alert alert-danger shadow-sm mb-4" role="alert"></div>
+                }
 
-    @{
-        var allCourses = ViewBag.Courses as List<LookupDto>;
-
-        if (allCourses != null)
-        {
-            for (int i = 0; i < allCourses.Count; i++)
-            {
-                <div class="form-group border p-3 mb-2">
-
-                    <input type="hidden"
-                           name="Courses[@i].CourseId"
-                           value="@allCourses[i].Id" />
-
-                    <div class="form-check">
-                        <input type="checkbox"
-                               name="Courses[@i].isSelected"
-                               value="true"
-                               class="form-check-input" />
-
-                        <label class="form-check-label">
-                            @allCourses[i].Name
-                        </label>
-                    </div>
-
-                    <input type="number"
-                           name="Courses[@i].Hours"
-                           min="1"
-                           placeholder="Hours"
-                           class="form-control" />
-
+            <!-- Main Form Card -->
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white py-3">
+                    <h4 class="mb-0"><i class="bi bi-journal-plus me-2"></i>Add / Edit Track</h4>
                 </div>
-            }
-        }
-    }
-  
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+                <div class="card-body p-4">
+                    <form method="post">
+                        
+                        <!-- Track Name -->
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label fw-semibold">Track Name</label>
+                            <input asp-for="Name" type="text" class="form-control" placeholder="e.g. Asp.Net Core">
+                            <span asp-validation-for="Name" class="text-danger small"></span>
+                        </div>
+                       
+                        <!-- Description -->
+                        <div class="mb-3">
+                            <label asp-for="Description" class="form-label fw-semibold">Description</label>
+                            <textarea asp-for="Description" class="form-control" rows="3" placeholder="Web application development"></textarea>
+                            <span asp-validation-for="Description" class="text-danger small"></span>
+                        </div>
 
-@section Scripts{
+                        <div class="row">
+                            <!-- Branch -->
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="BranchId" class="form-label fw-semibold">Branch</label>
+                                <select asp-for="BranchId" asp-items="ViewBag.Branches" class="form-select">
+                                    <option value="">Select a branch</option>
+                                </select>
+                                <span asp-validation-for="BranchId" class="text-danger small"></span>
+                            </div>
+
+                            <!-- Intake -->
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="IntakeId" class="form-label fw-semibold">Intake</label>
+                                <select asp-for="IntakeId" asp-items="ViewBag.Intakes" class="form-select">
+                                    <option value="">Select an Intake</option>
+                                </select>
+                                <span asp-validation-for="IntakeId" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <!-- Courses Section -->
+                        @* <h5 class="mb-3 text-secondary"><i class="bi bi-book me-2"></i>Assign Courses & Hours</h5> *@
+                        
+                        @* <div class="courses-container mb-4">
+                            @{
+                                var allCourses = ViewBag.Courses as List<LookupDto>;
+                                if (allCourses != null && allCourses.Any())
+                                {
+                                    for (int i = 0; i < allCourses.Count; i++)
+                                    {
+                                        <div class="p-3 bg-light rounded shadow-sm border mb-3">
+                                            <input type="hidden" name="Courses[@i].CourseId" value="@allCourses[i].Id" />
+                                            
+                                            <div class="row align-items-center">
+                                                <div class="col-md-7 mb-2 mb-md-0">
+                                                    <div class="form-check">
+                                                        <input type="checkbox" name="Courses[@i].isSelected" value="true" class="form-check-input" id="course_@i" />
+                                                        <label class="form-check-label fw-semibold" for="course_@i">
+                                                            @allCourses[i].Name
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="input-group input-group-sm">
+                                                        <span class="input-group-text">Hours</span>
+                                                        <input type="number" name="Courses[@i].Hours" min="1" placeholder="Hours" class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <p class="text-muted text-center py-3 border rounded bg-light">No courses available.</p>
+                                }
+                            }
+                        </div> *@
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg shadow-sm">
+                                <i class="bi bi-save me-2"></i>Save Track
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
     <partial name="_ValidationScriptsPartial" />
-
 }

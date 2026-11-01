@@ -16,7 +16,41 @@
         public string BranchName { get; set; } = string.Empty;
     }
 *@
-
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+                    <i class="bi bi-check-circle-fill me-2"></i> @TempData["SuccessMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+            else if (TempData["FailedToAdd"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i> @TempData["ErrorMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+            else if (TempData["SuccessMessageDeleted"] != null)
+            {
+                <div class="alert alert-dark alert-dismissible fade show shadow-sm" role="alert">
+                    <i class="bi bi-check-circle-fill me-2"></i> @TempData["SuccessMessageDeleted"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+             else if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i> @TempData["ErrorMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+            else if (TempData["SuccessMessageUpdated"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+                    <i class="bi bi-check-circle-fill me-2"></i> @TempData["SuccessMessageUpdated"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
 <div class="container my-5">
     <!-- Page Header & Action Bar -->
     <div class="d-flex justify-content-between align-items-center mb-4">
@@ -79,9 +113,11 @@
                                             <a asp-action="Update" asp-route-id="@track.Id" class="btn btn-outline-primary" title="Update">
                                                 <i class="bi bi-pencil"></i> Update
                                             </a>
-                                            <a asp-action="Delete" asp-route-id="@track.Id" class="btn btn-outline-danger" title="Delete">
-                                                <i class="bi bi-trash"></i> Delete
-                                            </a>
+                                            <form method="post" asp-action="Delete" asp-route-id="@track.Id" class="d-inline">
+                                                <button type="submit" class="btn btn-outline-danger" title="Delete">
+                                                    <i class="bi bi-trash"></i> Delete
+                                                </button>
+                                            </form>
                                         </div>
                                     </td>
                                 </tr>

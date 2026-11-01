@@ -33,7 +33,10 @@ public class TrackRepo : GenericRepo<Track>, ITrackRepo
     {
         return await context.TrackCourses.Where(x => x.TrackId == trackId).Include(x=>x.Course).ToListAsync(); 
     }
-
+    public async Task<List<TrackCourse>> GetNotTrackCoursesAsync(int trackId)
+    {
+        return await context.TrackCourses.Where(x => x.TrackId != trackId).Include(x => x.Course).ToListAsync();
+    }
     public async Task<List<Student>> GetTrackStudentsAsync(int trackId)
     {
       return await context.Students.AsNoTracking().Where(x=>x.TrackId == trackId).ToListAsync(); 
