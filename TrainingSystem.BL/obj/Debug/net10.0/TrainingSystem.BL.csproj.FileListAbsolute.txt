@@ -27,3 +27,6 @@ C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem.BL
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\refint\TrainingSystem.BL.dll
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\TrainingSystem.BL.pdb
 C:\Users\MustafaAbdulrahmanAb\Desktop\DummyTest\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\ref\TrainingSystem.BL.dll
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\bin\Debug\net10.0\TrainingSystem.DAL.dll
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\bin\Debug\net10.0\TrainingSystem.DAL.pdb
+C:\Users\oppa\Desktop\Dummy\TrainingSystem\TrainingSystem.BL\obj\Debug\net10.0\TrainingSystem.BL.sourcelink.json

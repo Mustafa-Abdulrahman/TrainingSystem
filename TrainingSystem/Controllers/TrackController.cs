@@ -136,4 +136,13 @@ public class TrackController: Controller
 
         return View();
     }
+
+    [HttpPost]
+    public Task<IActionResult> AddTrackCourse(int trackId, List<int> courseIds)
+    {
+        if (courseIds.Any())
+        {
+            
+        }
+    }
 }

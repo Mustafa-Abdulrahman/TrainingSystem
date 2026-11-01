@@ -16,15 +16,61 @@
     </div>
     <div class="form-group">
         <label asp-for="IntakeId">Intake</label>
-        <select class="form-control" asp-for="IntakeId" asp-items="ViewBag.Intakes" multiple>
+        <select class="form-control" asp-for="IntakeId" asp-items="ViewBag.Intakes" >
         </select>
     </div>
     <div class="form-group">
         <label asp-for="BranchId">Branch</label>
-        <select class="form-control" asp-for="BranchId" asp-items="ViewBag.Branches" multiple>
+        <select class="form-control" asp-for="BranchId" asp-items="ViewBag.Branches" >
         </select>
     </div>
-    
+    <div class="courses-container mb-4">
+        @{
+            var allCourses = ViewBag.TrackCourses as List<TrackCourseDto>;
+            if (allCourses != null && allCourses.Any())
+            {
+                for (int i = 0; i < allCourses.Count; i++)
+                {
+                    <div class="p-3 bg-light rounded shadow-sm border mb-3">
+                        <input type="hidden" name="Courses[@i].CourseId" value="@allCourses[i].CourseId" />
 
+                        <div class="row align-items-center">
+                            <div class="col-md-7 mb-2 mb-md-0">
+                                <p>@allCourses[i].CourseName</p>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-text">Hours</span>
+                                    <input type="number" name="Courses[@i].Hours" min="1" placeholder="Hours" class="form-control" value="@allCourses[i].Hours" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-muted text-center py-3 border rounded bg-light">No courses available.</p>
+            }
+        }
+    </div>
 
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-lg shadow-sm">
+                <i class="bi bi-save me-2"></i>Update Track
+            </button>
+        </div>
+   
 </form>
+
+<form method="post" asp-action="AddTrackCourse" asp-route-id="@Model.Id" class="d-inline">
+   
+    <div class="form-group">
+        <label >Branch</label>
+        <select name="courseIds" class="form-control" asp-items="ViewBag.Othercourses" multiple>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-outline-danger" title="Update Courses">
+        <i class="bi bi-trash"></i> Add Courses
+    </button>
+</form> 

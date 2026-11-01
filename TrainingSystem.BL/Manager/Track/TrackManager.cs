@@ -195,10 +195,10 @@ public class TrackManager : ITrackManager
         var trackCourses =await _unitOfWork.TrackRepo.GetNotTrackCoursesAsync(id);
         return trackCourses.Select(x => new LookupDto { Id = x.CourseId, Name = x.Course.Name }).ToList();
     }
-    public async Task<List<LookupDto>> GetCoursesInTrackAsync(int id)
+    public async Task<List<TrackCourseDto>> GetCoursesInTrackAsync(int id)
     {
         var trackCourses = await _unitOfWork.TrackRepo.GetTrackCoursesAsync(id);
-        return trackCourses.Select(x => new LookupDto { Id = x.CourseId, Name = x.Course.Name }).ToList();
+        return trackCourses.Select(x => new TrackCourseDto { CourseId = x.CourseId, CourseName = x.Course.Name, Hours  = x.Hours }).ToList();
     }
     // ---------------------------------------------------------------- UpdateAsync
 
@@ -228,34 +228,34 @@ public class TrackManager : ITrackManager
         track.IntakeId = dto.IntakeId;
         track.BranchId = dto.BranchId;
 
-        //var exitingCourse = await _unitOfWork.TrackRepo.GetTrackCoursesAsync(track.Id);
-        //var incomingCourse = dto.Courses;
+        var exitingCourse = await _unitOfWork.TrackRepo.GetTrackCoursesAsync(track.Id);
+        var incomingCourse = dto.Courses;
 
-        //Dictionary<int, TrackCourse> exitingCourseDict = exitingCourse.ToDictionary(x => x.CourseId, x => x);
-        //foreach (var course in incomingCourse)
-        //{
-        //    if (exitingCourseDict.ContainsKey(course.CourseId))
-        //    {
-        //        // Update existing course
-        //        exitingCourseDict[course.CourseId].Hours = course.Hours;
-        //        exitingCourseDict.Remove(course.CourseId);
-        //    }
-        //    else
-        //    {
-        //        // Add new course
-        //        track.TrackCourses.Add(new TrackCourse
-        //        {
-        //            CourseId = course.CourseId,
-        //            Hours = course.Hours
-        //        });
-        //    }
-        //}
-        //foreach (var course in exitingCourseDict.Values)
-        //{
-        //    // Remove courses that are not in the incoming list
-        //    track.TrackCourses.Remove(course);
-        //    _unitOfWork.TrackCourseRepo.Delete(course);
-        //}
+        Dictionary<int, TrackCourse> exitingCourseDict = exitingCourse.ToDictionary(x => x.CourseId, x => x);
+        foreach (var course in incomingCourse)
+        {
+            if (exitingCourseDict.ContainsKey(course.CourseId))
+            {
+                // Update existing course
+                exitingCourseDict[course.CourseId].Hours = course.Hours;
+                exitingCourseDict.Remove(course.CourseId);
+            }
+            else
+            {
+                // Add new course
+                track.TrackCourses.Add(new TrackCourse
+                {
+                    CourseId = course.CourseId,
+                    Hours = course.Hours
+                });
+            }
+        }
+        foreach (var course in exitingCourseDict.Values)
+        {
+            // Remove courses that are not in the incoming list
+            track.TrackCourses.Remove(course);
+            _unitOfWork.TrackCourseRepo.Delete(course);
+        }
 
         _unitOfWork.TrackRepo.Update(track);
         await _unitOfWork.SaveChangesAsync();
