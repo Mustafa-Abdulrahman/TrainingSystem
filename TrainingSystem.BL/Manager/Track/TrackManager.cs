@@ -46,6 +46,23 @@ public class TrackManager : ITrackManager
         return new OperationResult { Succeeded = true, };
 
     }
+
+
+    public async Task<OperationResult> CreateNewTrackCourse(TrackSaveDto dto)
+    {
+        var trackCourses = dto.Courses.Select(x => new TrackCourse
+        {
+            CourseId = x.CourseId,
+            Hours = x.Hours,
+            TrackId = dto.Id
+        }).ToList();
+        foreach (var trackCourse in trackCourses)
+        {
+            _unitOfWork.TrackCourseRepo.Add(trackCourse);
+        }
+        await _unitOfWork.SaveChangesAsync();
+        return new OperationResult { Succeeded = true, };
+    }
     // ---------------------------------------------------------------- DeleteAsync
 
     public async Task<OperationResult> DeleteAsync(int id)
@@ -193,7 +210,7 @@ public class TrackManager : ITrackManager
     }
     public async Task<List<LookupDto>> GetCoursesNotInTrackAsync(int id) {
         var trackCourses =await _unitOfWork.TrackRepo.GetNotTrackCoursesAsync(id);
-        return trackCourses.Select(x => new LookupDto { Id = x.CourseId, Name = x.Course.Name }).ToList();
+        return trackCourses.Select(x => new LookupDto { Id = x.Id, Name = x.Name }).ToList();
     }
     public async Task<List<TrackCourseDto>> GetCoursesInTrackAsync(int id)
     {

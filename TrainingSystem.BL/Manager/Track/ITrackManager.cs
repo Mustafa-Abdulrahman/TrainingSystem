@@ -17,4 +17,6 @@ public interface ITrackManager
     public Task<List<LookupDto>> GetCoursesLookupAsync();
     public Task<List<LookupDto>> GetCoursesNotInTrackAsync(int id);
     public Task<List<TrackCourseDto>> GetCoursesInTrackAsync(int id);
+    public Task<OperationResult> CreateNewTrackCourse(TrackSaveDto dto);
+
 }

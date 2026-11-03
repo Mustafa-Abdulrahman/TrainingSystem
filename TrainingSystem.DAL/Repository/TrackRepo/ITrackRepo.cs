@@ -9,7 +9,7 @@ public interface ITrackRepo:IGenericRepo<Track>
     public Task<List<Track>> GetAllWithDetailsAsync();
     public Task<Track?> GetByIdWithDetailsAsync(int id);
     public Task<List<TrackCourse>> GetTrackCoursesAsync(int trackId);
-    public Task<List<TrackCourse>> GetNotTrackCoursesAsync(int trackId);
+    public Task<List<Course>> GetNotTrackCoursesAsync(int trackId);
     public Task<List<Student>> GetTrackStudentsAsync(int trackId);
 
     public Task<bool> ExistsAsync(int intakeId, int branchId, string name, int? excludeId);

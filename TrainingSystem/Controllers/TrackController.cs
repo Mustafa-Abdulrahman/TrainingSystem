@@ -138,11 +138,42 @@ public class TrackController: Controller
     }
 
     [HttpPost]
-    public Task<IActionResult> AddTrackCourse(int trackId, List<int> courseIds)
+    public async Task<IActionResult> AddTrackCourse(int Id, List<int> courseIds)
     {
         if (courseIds.Any())
         {
-            
+            var intakes = await trackManager.GetIntakesLookupAsync();
+            ViewBag.Intakes = new SelectList(intakes, "Id", "Name");
+            var branches = await trackManager.GetBranchesLookupAsync();
+            ViewBag.Branches = new SelectList(branches, "Id", "Name");
+            var Othercourses = await trackManager.GetCoursesNotInTrackAsync(Id);
+            ViewBag.OtherCourses = new SelectList(Othercourses, "Id", "Name");
+            var Trackcourses = await trackManager.GetCoursesInTrackAsync(Id);
+            ViewBag.TrackCourses = Trackcourses;
+            for (int i=0;i< courseIds.Count; i++)
+            {
+                var trackCourseDto = new TrackSaveDto
+                {
+                    Id = Id,
+                    Courses = new List<TrackCourseSaveDto>
+                    {
+                        new TrackCourseSaveDto
+                        {
+                            CourseId = courseIds[i],
+                            Hours = 3 // Set the hours as needed
+                        }
+                    }
+                };
+                var result =await trackManager.CreateNewTrackCourse(trackCourseDto);
+                if (!result.Succeeded)
+                {
+
+                    TempData["ErrorMessage"] = result.Error;
+                    return RedirectToAction("Update", new { id = Id });
+                }
+            }
         }
+        
+        return RedirectToAction("Update", new { id = Id });
     }
 }
